@@ -97,8 +97,8 @@ class TinyPerson:
     def _init_llm_client(self):
         """初始化LLM客户端"""
         self.llm_client = OpenAI(
-            api_key=os.getenv("DASHSCOPE_API_KEY", "sk-08e683555efd433b8ef0d346a0cf5fa8"),
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key=os.getenv("DASHSCOPE_API_KEY", "#"),
+            base_url="#",
         )
         if not self.llm_client.api_key:
             raise EnvironmentError("未找到DASHSCOPE_API_KEY环境变量")
@@ -143,8 +143,8 @@ class TinyPersonFactory:
     def _init_llm_client(self):
         """初始化LLM客户端"""
         self.llm_client = OpenAI(
-            api_key="sk-08e683555efd433b8ef0d346a0cf5fa8",
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key="#",
+            base_url="#",
         )
 
     def generate_from_define(self, definition: Dict) -> TinyPerson:

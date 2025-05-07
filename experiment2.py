@@ -20,8 +20,8 @@ class BaseAgent(ABC):
     def _initialize_api_client(self) -> OpenAI:
         """初始化LLM客户端"""
         return OpenAI(
-            api_key="sk-08e683555efd433b8ef0d346a0cf5fa8",#选取合适的API密钥，如deepseek
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key="#",#选取合适的API密钥，如deepseek
+            base_url="#",
         )
     
     @abstractmethod
@@ -160,7 +160,7 @@ class TinyWorld:
 # 示例用法
 if __name__ == "__main__":
     # 创建智能体
-    lisa = LLMEnhancedAgent(
+    lisa = TinyPerson(
         name="Lisa",
         role="数据科学家",
         traits=["分析型思维", "技术热情", "跨部门协作"],
@@ -170,7 +170,7 @@ if __name__ == "__main__":
         }
     )
     
-    oscar = LLMEnhancedAgent(
+    oscar = TinyPerson(
         name="Oscar",
         role="建筑师",
         traits=["空间想象力", "可持续发展意识", "技术创新"],
@@ -193,6 +193,6 @@ if __name__ == "__main__":
     # 输出完整对话记录
     print("\n完整对话记录：")
     for record in results:
-        print(f"{record['agent']}: [THOUGHT] {record['thought']}")
-        print(f"{record['agent']}: [SPEECH] {record['speech']}")
+        print(f"{record['agent']}: [思考] {record['thought']}")
+        print(f"{record['agent']}: [行动] {record['speech']}")
         print("-" * 50)

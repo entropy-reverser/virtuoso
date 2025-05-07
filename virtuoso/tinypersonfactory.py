@@ -19,8 +19,8 @@ class TinyPersonFactory:
     def __init__(self, base_scene: str):
         self.base_scene = base_scene
         self.api_client = OpenAI(
-            api_key="sk-08e683555efd433b8ef0d346a0cf5fa8",
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key="#",
+            base_url="#",
         )
     
     def _parse_instruction(self, instruction: str) -> Dict[str, Any]:

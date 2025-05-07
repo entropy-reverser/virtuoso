@@ -16,8 +16,8 @@ class BaseAgent(ABC):
     def _initialize_api_client(self) -> OpenAI:
         """初始化LLM客户端"""
         return OpenAI(
-            api_key="sk-08e683555efd433b8ef0d346a0cf5fa8",#选取合适的API密钥，如deepseek，通义千问，azure openai...
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key="",#选取合适的API密钥，如deepseek，通义千问，azure openai...
+            base_url="#",#选取合适的模型地址，如https://api.openai.com/v1/chat/completions
         )
     
     @abstractmethod

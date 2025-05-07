@@ -86,8 +86,8 @@ class TinyAgent:
     def _init_llm_client(self):
         """初始化LLM客户端"""
         self.llm_client = OpenAI(
-            api_key="sk-08e683555efd433b8ef0d346a0cf5fa8",
-            base_url="https://dashscope.aliyuncs.com/compatible-mode/v1",
+            api_key="#",
+            base_url="#",
         )
         if not self.llm_client.api_key:
             raise EnvironmentError("未配置DASHSCOPE_API_KEY环境变量")
